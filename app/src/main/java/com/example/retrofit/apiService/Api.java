@@ -2,6 +2,7 @@ package com.example.retrofit.apiService;
 
 import com.example.retrofit.model.Comment;
 import com.example.retrofit.model.Post;
+import com.example.retrofit.model.StateResponse;
 
 import java.util.List;
 
@@ -26,4 +27,7 @@ public interface Api {
 
     @DELETE("posts/{id}")
     Call<Void> deletePost(@Path("id")int postId);
+
+    @GET("cities/cities_array.json")
+    Call<List<StateResponse>> getStates();
 }
